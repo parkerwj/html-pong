@@ -14,6 +14,7 @@ canvas.height = window.innerHeight;
 const backgroundMusic = new Audio('audio/background_music.mp3');
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.2;
+backgroundMusic.preload = "auto";
 backgroundMusic.play();
 
 const collisionSound = new Audio('audio/collision_sound.wav');
