@@ -11,13 +11,14 @@ let paused = false;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const backgroundMusic = new Audio('audio/background_music.wav');
+const backgroundMusic = new Audio('audio/background_music.mp3');
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.2;
 backgroundMusic.play();
 
 const collisionSound = new Audio('audio/collision_sound.wav');
 const pointSound = new Audio('audio/slow.wav');
+const pausedSound = new Audio('audio/pause.wav')
 
 const ballRadius = 10;
 let ball = {
@@ -168,6 +169,7 @@ function handleKeyDown(event) {
       break;
     case 'Space':
       paused = !paused;
+      pausedSound.play();
       break;
   }
 }
