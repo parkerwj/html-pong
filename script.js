@@ -25,8 +25,8 @@ const ballRadius = 10;
 let ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  dx: 5,
-  dy: -5
+  dx: 7,
+  dy: -7
 };
 
 // adjust the paddle height and width
@@ -52,7 +52,15 @@ function drawBall() {
   ctx.beginPath();
   ctx.arc(ball.x, ball.y, ballRadius, 0, Math.PI * 2);
   ctx.fillStyle = 'red';
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 2;
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
   ctx.fill();
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
+  ctx.shadowBlur = 0;
+  ctx.shadowColor = 'transparent';
   ctx.closePath();
 }
 
@@ -60,7 +68,15 @@ function drawPaddle(x, y, color) {
   ctx.beginPath();
   ctx.rect(x, y, paddleWidth, paddleHeight);
   ctx.fillStyle = color;
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 2;
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
   ctx.fill();
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
+  ctx.shadowBlur = 0;
+  ctx.shadowColor = 'transparent';
   ctx.closePath();
 }
 
@@ -134,8 +150,34 @@ function updateObjects() {
 function drawScore() {
   ctx.font = "40px Arial";
   ctx.fillStyle = "white";
-  ctx.fillText(player1Name + ": " + paddleA.score, 20, 50);
-  ctx.fillText(player2Name + ": " + paddleB.score, canvas.width - 300, 50);
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
+  ctx.shadowBlur = 2;
+  ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+  
+  // Calculate the width of the text for player 1
+  var player1ScoreWidth = ctx.measureText(player1Name + ": " + paddleA.score).width;
+
+  // Set the x-coordinate for the score for player 1
+  var player1ScoreX = canvas.width/4 - player1ScoreWidth/2;
+  
+  // Draw the text for player 1
+  ctx.fillText(player1Name + ": " + paddleA.score, player1ScoreX, 50);
+
+  // Calculate the width of the text for player 2
+  var player2ScoreWidth = ctx.measureText(player2Name + ": " + paddleB.score).width;
+
+  // Set the x-coordinate for the score for player 2
+  var player2ScoreX = canvas.width - canvas.width/4 - player2ScoreWidth/2;
+
+  // Draw the text for player 2
+  ctx.fillText(player2Name + ": " + paddleB.score, player2ScoreX, 50);
+
+  // Reset the shadow properties
+  ctx.shadowOffsetX = 0;
+  ctx.shadowOffsetY = 0;
+  ctx.shadowBlur = 0;
+  ctx.shadowColor = 'transparent';
 }
 
 function drawFrame() {
@@ -143,10 +185,19 @@ function drawFrame() {
   if (paused) {
     ctx.font = "60px Arial";
     ctx.fillStyle = "white";
+    ctx.shadowOffsetX = 2;
+    ctx.shadowOffsetY = 2;
+    ctx.shadowBlur = 2;
+    ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
     ctx.fillText("Paused", canvas.width/2-100, canvas.height/2);  
+    ctx.shadowOffsetX = 0;
+    ctx.shadowOffsetY = 0;
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
     requestAnimationFrame(drawFrame);
     return;
   }
+  // rest of the code for drawing the game
   drawNet();
   drawPaddle(paddleA.x, paddleA.y, player1PaddleColor);
   drawPaddle(paddleB.x, paddleB.y, player2PaddleColor);
