@@ -1,8 +1,58 @@
 canvas {
     background-image: url('images/background_image.png');
     background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #menu {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  #menu h1 {
+    font-size: 60px;
+    color: white;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  
+  #menu input[type=text], #menu select, #menu button {
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  #menu button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #menu button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #menu input[type=text], #menu select {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  #menu label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
   }

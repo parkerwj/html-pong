@@ -5,6 +5,28 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div id="menu">
+    <h1>Pong Game</h1>
+    <label for="num-players">Number of Players: </label>
+    <select id="num-players">
+      <option value="1">1 Player</option>
+      <option value="2">2 Player</option>
+    </select>
+    <br>
+    <label for="player1-name">Enter Player 1's Name: </label>
+    <input type="text" id="player1-name" placeholder="Player 1 Name">
+    <label for="player1-color">Choose Player 1's Paddle Color:</label>
+    <input type="color" id="player1-color" value="#00ff00">
+    <br>
+    <br>
+    <label for="player2-name">Enter Player 2's Name: </label>
+    <input type="text" id="player2-name" placeholder="Player 2 Name">
+    <label for="player2-color">Choose Player 2's Paddle Color:</label>
+    <input type="color" id="player2-color" value="#ff0000">
+    <br>
+    <br>
+    <button id="start-game">Start Game</button>
+  </div>
   <canvas></canvas>
   <script src="script.js"></script>
 </body>
