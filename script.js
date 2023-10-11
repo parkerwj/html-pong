@@ -25,12 +25,12 @@ const ballRadius = 10;
 let ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  dx: 6,
-  dy: -6
+  dx: 6.5,
+  dy: -6.5
 };
 
 // adjust the paddle height and width
-const paddleHeightPercentage = 10;
+const paddleHeightPercentage = 9;
 const paddleWidthPercentage = .8;
 const paddleHeight = canvas.height*(paddleHeightPercentage / 100);
 const paddleWidth = canvas.width*(paddleWidthPercentage / 100);
@@ -248,12 +248,12 @@ function handleKeyUp(event) {
 
 function movePaddleBWithAI() {
   if (ball.dx > 0) {
-    let randomness = ball.y * 0.16; // add some randomness
+    let randomness = ball.y * 0.122; // add some randomness
     let targetY = ball.y + Math.random() * 2 * randomness - randomness;
     if (targetY > paddleB.y + paddleHeight / 2) {
-      paddleB.dy = paddleSpeed/1.5;
+      paddleB.dy = paddleSpeed/1.6;
     } else if (targetY < paddleB.y + paddleHeight / 2) {
-      paddleB.dy = -paddleSpeed/1.5;
+      paddleB.dy = -paddleSpeed/1.6;
     } else {
       paddleB.dy = 0;
     }
