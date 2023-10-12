@@ -217,10 +217,18 @@ function handleKeyDown(event) {
       paddleA.dy = paddleSpeed;
       break;
     case 'ArrowUp':
-      paddleB.dy = -paddleSpeed;
+      if (numPlayers === 2) {
+        paddleB.dy = -paddleSpeed;
+      } else {
+        paddleA.dy = -paddleSpeed;
+      }
       break;
     case 'ArrowDown':
-      paddleB.dy = paddleSpeed;
+      if (numPlayers === 2) {
+        paddleB.dy = paddleSpeed;
+      } else {
+        paddleA.dy = paddleSpeed;
+      }
       break;
     case 'Space':
       paused = !paused;
@@ -238,17 +246,25 @@ function handleKeyUp(event) {
       paddleA.dy = 0;
       break;
     case 'ArrowUp':
-      paddleB.dy = 0;
+      if (numPlayers === 2) {
+        paddleB.dy = 0;
+      } else {
+        paddleA.dy = 0;
+      }
       break;
     case 'ArrowDown':
-      paddleB.dy = 0;
+      if (numPlayers === 2) {
+        paddleB.dy = 0;
+      } else {
+        paddleA.dy = 0;
+      }
       break;
   }
 }
 
 function movePaddleBWithAI() {
   if (ball.dx > 0) {
-    let randomness = ball.y * 0.122; // add some randomness
+    let randomness = ball.y * 0.1; // add some randomness
     let targetY = ball.y + Math.random() * 2 * randomness - randomness;
     if (targetY > paddleB.y + paddleHeight / 2) {
       paddleB.dy = paddleSpeed/1.6;
