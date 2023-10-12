@@ -264,7 +264,7 @@ function handleKeyUp(event) {
 
 function movePaddleBWithAI() {
   if (ball.dx > 0) {
-    let randomness = ball.y * 0.1; // add some randomness
+    let randomness = ball.y * 0.12; // add some randomness
     let targetY = ball.y + Math.random() * 2 * randomness - randomness;
     if (targetY > paddleB.y + paddleHeight / 2) {
       paddleB.dy = paddleSpeed/1.6;
