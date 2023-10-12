@@ -15,7 +15,6 @@ const backgroundMusic = new Audio('audio/background_music.mp3');
 backgroundMusic.loop = true;
 backgroundMusic.volume = 0.2;
 backgroundMusic.preload = "auto";
-backgroundMusic.play();
 
 const collisionSound = new Audio('audio/collision_sound.wav');
 const pointSound = new Audio('audio/slow.wav');
@@ -290,6 +289,10 @@ document.getElementById("start-game").addEventListener("click", function() {
   player2PaddleColor = document.getElementById("player2-color").value;
   document.getElementById("menu").style.display = "none";
   requestAnimationFrame(drawFrame);
+});
+
+document.querySelector('#play-audio').addEventListener('click', function() {
+  backgroundMusic.play();
 });
 
 document.getElementById("player2-color").addEventListener("input", handlePlayer2ColorChange);
