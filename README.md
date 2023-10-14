@@ -1,8 +1,8 @@
 # Overview
 
-As a software engineer, I wanted to create a game that would challenge me and help further my learning. The game I created is called Super Mario Bounce. It is a two-player game where each player controls a paddle and tries to bounce a ball past their opponent to score points. The game ends when one player scores ten points.
+As a software engineer, I wanted to create a game that would challenge me and help further my learning. The game I created is called Super Mario Bounce. It is a two-player game where each player controls a paddle and tries to bounce a ball past their opponent to score points.
 
-To play the game, the players use the arrow keys (or W and S keys for player 1) to move their paddles up and down. The ball bounces off the top and bottom of the screen and off the paddles. If the ball gets past a player's paddle and goes off the screen, the other player scores a point. The game is won by the player who reaches ten points first.
+To play the game, the players use the arrow keys (or W and S -or- Up and Down keys for player 1) to move their paddles up and down. The ball bounces off the top and bottom of the screen and off the paddles. If the ball gets past a player's paddle and goes off the screen, the other player scores a point.
 
 My purpose in writing this software was to challenge myself and improve my skills as a software engineer. I wanted to create a game that was fun to play and would teach me new things about programming.
 
