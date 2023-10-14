@@ -15,6 +15,7 @@ I used Visual Studio Code to write the code for this game. Visual Studio Code is
 * JavaScript - The programming language used to create the game logic
 * HTML5 Canvas - A powerful tool used to create graphics and animations in web browsers
 * Web Audio API - Used to play background music and sound effects
+* CSS - Used for styling the game page and adding aesthetics to the game
 
 I found that integrating these tools and libraries was a fun and challenging task, as I had to experiment with different approaches to get the game working smoothly. In the end, I learned a lot about game development and JavaScript programming that I can apply to future projects.
 
