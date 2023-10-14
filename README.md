@@ -6,7 +6,7 @@ To play the game, the players use the arrow keys (or W and S keys for player 1) 
 
 My purpose in writing this software was to challenge myself and improve my skills as a software engineer. I wanted to create a game that was fun to play and would teach me new things about programming.
 
-[Software Demo Video](https://www.youtube.com)
+[Software Demo Video](https://youtu.be/uF6kXDQBZwQ)
 
 # Development Environment
 
