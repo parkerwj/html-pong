@@ -10,8 +10,6 @@ My purpose in writing this software was to challenge myself and improve my skill
 
 # Development Environment
 
-# Development Environment
-
 I used Visual Studio Code to write the code for this game. Visual Studio Code is a free, open-source code editor that is lightweight and easy to use. It helped me manage my code and test the game in real-time. I also used the following tools and libraries:
 
 * JavaScript - The programming language used to create the game logic
