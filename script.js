@@ -24,8 +24,8 @@ const ballRadius = 10;
 let ball = {
   x: canvas.width / 2,
   y: canvas.height / 2,
-  dx: 8,
-  dy: -8
+  dx: 80,
+  dy: -80
 };
 
 // adjust the paddle height and width
